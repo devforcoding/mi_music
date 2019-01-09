@@ -1,0 +1,77 @@
+.navbar {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 4rem;
+
+    &--white {
+        color: #fff;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__content {
+        display: flex;
+        align-items: center;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    &__element {
+        margin: 0 2rem;
+
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 160%;
+            height: 2px;
+            background-color: currentColor;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform .3s;
+        }
+
+        &--active::after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        
+        &:hover {
+
+            &::after {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+
+    &__link,
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: inherit;
+    }
+
+    &__social-icons {
+        margin-left: 3rem;
+
+        svg {
+            margin: 0 1rem;
+        }
+    }
+}

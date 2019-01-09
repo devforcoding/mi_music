@@ -1,0 +1,23 @@
+.btn,
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: currentColor;
+    font-weight: 500;
+    font-size: 1.6em;
+    letter-spacing: .2em;
+}
+
+.btn--blue,
+.btn--blue:link,
+.btn--blue:visited {
+    background-color: $color-blue-dark;
+}
+
+.btn--big,
+.btn--big:link,
+.btn--big:visited {
+    padding: 1.4em 3.7em;
+}
